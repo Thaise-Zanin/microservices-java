@@ -11,7 +11,7 @@ import jakarta.persistence.Transient;
 @Entity
 @Table(name = "tb_product")
 public class ProductEntity {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -25,9 +25,10 @@ public class ProductEntity {
 	private Integer stock;
 	
 	@Transient
-	private String environment;
+	private String enviroment;
 	@Transient
 	private double convertedPrice;
+	
 	public Long getId() {
 		return id;
 	}
@@ -70,11 +71,11 @@ public class ProductEntity {
 	public void setStock(Integer stock) {
 		this.stock = stock;
 	}
-	public String getEnvironment() {
-		return environment;
+	public String getEnviroment() {
+		return enviroment;
 	}
-	public void setEnvironment(String environment) {
-		this.environment = environment;
+	public void setEnviroment(String enviroment) {
+		this.enviroment = enviroment;
 	}
 	public double getConvertedPrice() {
 		return convertedPrice;
@@ -84,4 +85,6 @@ public class ProductEntity {
 	}
 	
 	
+	
+
 }
